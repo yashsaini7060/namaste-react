@@ -4,6 +4,8 @@
   "description": "react app",
 
   "scripts": {
+    "start": "npx parcel index.html",
+    "build": "npx build parcel index.html",
     "test": "jest"
   },
   "repository": {

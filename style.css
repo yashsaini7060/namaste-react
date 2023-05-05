@@ -1,3 +1,236 @@
-#heading{
-  color: red;
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 700;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/700.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 600;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/600.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 500;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/500.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 400;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/400.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: ProximaNova;
+  font-weight: 300;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/300.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: ProximaNovaBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.eot");
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.eot?#iefix") format("embedded-opentype"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/bold.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: AsapCondensedSemiBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.eot");
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.eot?#iefix") format("embedded-opentype"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.ttf") format("truetype"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/AsapCondensed-SemiBold.svg#AsapCondensedSemiBold") format("svg");
+  font-style: normal;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: ProximaNovaCondensedBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.eot");
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.eot?#iefix") format("embedded-opentype"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Bold.ttf") format("truetype");
+  font-style: normal
+}
+
+@font-face {
+  font-family: ProximaNovaBlack;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.ttf") format("truetype");
+  font-style: normal
+}
+
+@font-face {
+  font-family: ProximaNovaCondensedBlack;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Black.ttf") format("truetype");
+  font-style: normal
+}
+
+@font-face {
+  font-family: ProximaNovaCondensedRegular;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaCondensedRegular.ttf") format("truetype");
+  font-style: normal
+}
+
+@font-face {
+  font-family: ProximaNovaExtraBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaBlack.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaExtraBold.ttf") format("truetype");
+  font-style: normal
+}
+
+@font-face {
+  font-family: ProximaNovaLight;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaLight.ttf") format("truetype");
+  font-style: normal
+}
+
+@font-face {
+  font-family: ProximaNovaSemiBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ux3/ProximaNovaSemiBold.ttf") format("truetype");
+  font-style: normal
+}
+
+@font-face {
+  font-family: ProximaNovaCondensedExtraBold;
+  src: url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.woff2") format("woff2"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.woff") format("woff"),url("https://res.cloudinary.com/swiggy/raw/upload/FontAssets/ProximaNovaCond-Extrabld.ttf") format("truetype");
+  font-style: normal
+}
+
+.fonts-loaded {
+  font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+  letter-spacing: 0
+}
+
+
+*{
+  font-family: ProximaNova,arial,Helvetica Neue,sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 22rem;
+}
+
+
+.nav-items>ul, .left-filter>ul{
+  display: flex;
+  list-style: none;
+}
+
+
+.nav-items>ul>li{
+  font-size: 18px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+
+.slider{
+  display: flex;
+  justify-content: space-between;
+  padding: 2.5rem 22rem ;
+  background-color: #171A29;
+}
+
+.slider-card{
+  width:16rem;
+  height: 16rem;
+  overflow: hidden;
+  background-color: red;
+  transition: transform .2s;
+}
+.slidercard-img{
+  width: 100%;
+}
+
+
+.slider-card:hover {
+  -ms-transform: scale(1.10); /* IE 9 */
+  -webkit-transform: scale(1.10); /* Safari 3-8 */
+  transform: scale(1.10); 
+}
+
+
+.dishes-continer{
+  padding: 2rem 22rem;
+  padding-bottom: 10px;
+}
+
+.left-filter{
+  display: flex;
+  align-items: center;
+}
+
+.left-filter>ul>li{
+  font-size: 18px;
+  padding: 0px 20px;
+}
+
+.dishes-bar{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.restro-count{
+  font-size: 30px;
+}
+
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  
+  overflow: hidden;
+}
+
+.dishes-card{
+  padding: 20px 20px;
+  width: 256px;
+}
+
+
+
+.dishes-card:hover {
+  border: 1px solid #d3d5df;
+}
+
+
+.dishes-image>img{
+  width: 100%;
+}
+
+.res-head{
+  margin: 8px 0;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.res-des{
+  font-size: 13px;
+  color: #686b78;
+  margin-top: 4px;
+}
+
+.res-details{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  font-size: 12px;
+  color: #686b78;
+}
+
+.rating{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  width: 43px;
+  height: 20px;
+}
+
+.star{
+  height: 12px;
+  margin-right: 2px;
 }
