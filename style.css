@@ -137,7 +137,6 @@
   width:16rem;
   height: 16rem;
   overflow: hidden;
-  background-color: red;
   transition: transform .2s;
 }
 .slidercard-img{
@@ -204,6 +203,7 @@
   margin: 8px 0;
   font-size: 17px;
   font-weight: 500;
+  color: #686b78;
 }
 
 .res-des{
@@ -234,3 +234,51 @@
   height: 12px;
   margin-right: 2px;
 }
+
+
+button{
+  border: 0px;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+
+.shimmer-container{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.shimmer-card{
+  padding: 20px 20px;
+  margin: 20px;
+}
+
+.shim-top{
+  height: 10px;
+  width: 120px;
+  margin-bottom: 30px;
+  background: #E4E6EB;
+}
+
+.shim-box{
+  width: 250px;
+  height: 160px;
+  background: #E4E6EB;
+}
+
+
+
+.bot-lg{
+  margin-top: 30px;
+  margin-bottom: 0px;
+  width: 150px;
+}
+
+.bot-sm{
+  margin-top: 10px;
+  width: 100px;
+}
+
