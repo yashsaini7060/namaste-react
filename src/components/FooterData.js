@@ -13,6 +13,10 @@ class FooterData extends React.Component{
   componentDidMount() {
     console.log( this.props.name +" Component did mount");
   }
+   
+  componentWillUnmount() {
+    console.log( this.props.name +" Component un-mount");
+  }
 
   render() {
     console.log(this.props.name + " Render")

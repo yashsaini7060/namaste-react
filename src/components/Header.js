@@ -1,11 +1,11 @@
 import { useState } from "react"
 import {Link} from "react-router-dom";
-
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
 
   const [signIn, setsignIn] = useState("Sign In")
-
+  const online = useOnlineStatus();
   return (
     <div className="header">
     <div className="logo-container">
@@ -40,6 +40,7 @@ const Header = () => {
           signIn === "Sign In" ? setsignIn("Sign Out") : setsignIn("Sign In");
         }}>{signIn}</button></Link></li>
         <li><Link to="/cart"><button>Cart</button></Link></li>
+        <li>Online Status:{online ? "🟢" : "🔴"}</li>
       </ul>
     </div>
     </div>

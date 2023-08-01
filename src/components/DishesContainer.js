@@ -1,9 +1,9 @@
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HOME_API } from "../utils/constant";
 import DishesCard from "./DishesCard";
-// import resList from "../utils/mockdata";
 import Shimmer from "./Shimmer";
-import { useState, useEffect } from "react";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const DishesContainer = () => {
   const [listOfRestraunts, setListOfRestraunts] = useState([]);
@@ -12,7 +12,7 @@ const DishesContainer = () => {
   // Below comment is for rendering mock data which is imported from ulil file 
   // const [listOfRestraunts, setListOfRestraunts] = useState(resList);
 
-
+  const online = useOnlineStatus();
   useEffect(() => {
 
     fetchData();
@@ -25,13 +25,17 @@ const DishesContainer = () => {
 
     const json = await data.json();
 
-    setListOfRestraunts(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    setFilteredRestraunts(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-    console.log(setListOfRestraunts);
+    setListOfRestraunts(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
+    setFilteredRestraunts(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants || []);
+    console.log(listOfRestraunts);
 
   };
 
-
+  if(online === "online"){
+    return(
+      <h1>You are currently offline </h1>
+    )
+  }
 
   return listOfRestraunts.length === 0 ? <Shimmer /> : (
     <div className="dishes-continer">

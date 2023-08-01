@@ -13,6 +13,7 @@ class Footer extends React.Component{
    componentWillUnmount() {
     console.log("Parent Unmounted")
    }
+   
   render(){
     console.log("Parent Render");
     return( 
