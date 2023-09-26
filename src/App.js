@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
@@ -10,13 +10,28 @@ import { createBrowserRouter, RouterProvider,Outlet } from "react-router-dom"
 import SignIn from "./components/Signin";
 import Offers from "./components/Offers"
 import Restaurantmenu from "./components/Restaurantmenu";
+import UserContext from "./utils/UserContext";
 
-const AppLayout = () => (
-  <>
-    <Header />
-    <Outlet/>
-  </>
-);
+const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  //Dummya authentication
+  useEffect(() => {
+    //Make an API call and send username and password
+    const data = {
+      name: "Yash Saini",
+    };
+    setUserName(data.name);
+  },[])
+  return(
+    <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
+      <div>
+      <Header />
+      <Outlet/>
+    </div>
+    </UserContext.Provider>
+  );
+}
 
 const appRouter = createBrowserRouter([
 
@@ -26,10 +41,10 @@ const appRouter = createBrowserRouter([
     children:[
       {
         path: "/",
-        element: (<>
+        element: (<div className="px-[14rem]">
         <Slider />
         <DishesContainer />
-        </>),
+        </div>),
         errorElement: <Error/>
       },
       {

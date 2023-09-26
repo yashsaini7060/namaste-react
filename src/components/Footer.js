@@ -1,7 +1,8 @@
 import React from "react";
 import FooterData from "./FooterData";
+import UserContext from "../utils/UserContext";
 class Footer extends React.Component{
- 
+
   constructor(props){
     console.log("Parent Constructor");
     super(props);
@@ -17,11 +18,17 @@ class Footer extends React.Component{
   render(){
     console.log("Parent Render");
     return( 
-      <>  
-        <h1>Test Footer using class component</h1>
+      <div>  
+        <div>
+          LoggedIn User
+          <UserContext.Consumer>
+            {({loggedInUser}) => console.log(loggedInUser)}
+          </UserContext.Consumer>
+        </div>
+        <h1>Test Footer using classes component</h1>
         <FooterData name={"First"}/>
         <FooterData name={"Second"}/>
-      </>
+      </div>
     )
   }
 }

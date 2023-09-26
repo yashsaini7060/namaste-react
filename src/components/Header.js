@@ -1,13 +1,17 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import {Link} from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
 
   const [signIn, setsignIn] = useState("Sign In")
   const online = useOnlineStatus();
+  const { loggedInUser } = useContext(UserContext);
+  console.log(loggedInUser);
+
   return (
-    <div className="header">
+    <div className="header flex justify-between items-center px-[22rem] py-[1rem]">
     <div className="logo-container">
       <svg viewBox="0 0 559 825" height="49" width="34" fill="#fc8019">
         <path
@@ -32,7 +36,7 @@ const Header = () => {
       </svg>
     </div>
     <div className="nav-items">
-      <ul>
+      <ul className="flex justify-between w-[35rem] text-[18px] font-[500]">
         <li><Link to="/"><button>Search</button></Link></li>
         <li><Link to="/offers"><button>Offers</button></Link></li>
         <li><Link to="/help"><button>Help</button></Link></li>
@@ -41,6 +45,7 @@ const Header = () => {
         }}>{signIn}</button></Link></li>
         <li><Link to="/cart"><button>Cart</button></Link></li>
         <li>Online Status:{online ? "🟢" : "🔴"}</li>
+        <li>{loggedInUser}</li>
       </ul>
     </div>
     </div>
